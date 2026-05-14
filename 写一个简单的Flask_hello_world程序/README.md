@@ -1,5 +1,5 @@
 # Flask Hello World
 
-一个简单而完整的 Flask Web 应用示例。
+这是一个简单的 Flask Web 应用示例。
 
-## 📋 目录结构
+## 项目结构

@@ -5,41 +5,121 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flask Hello World</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            padding: 20px;
         }
+        
         .container {
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
             text-align: center;
-            padding: 40px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            backdrop-filter: blur(10px);
+            max-width: 600px;
+            width: 100%;
         }
+        
         h1 {
-            font-size: 3em;
+            color: #667eea;
+            font-size: 2.5em;
             margin-bottom: 20px;
         }
-        p {
-            font-size: 1.2em;
+        
+        .emoji {
+            font-size: 4em;
+            margin-bottom: 20px;
         }
-        a {
-            color: #ffd700;
+        
+        p {
+            color: #555;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        .app-name {
+            color: #764ba2;
+            font-weight: bold;
+        }
+        
+        .features {
+            margin-top: 30px;
+            text-align: left;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+        
+        .features h2 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        
+        .features ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .features li {
+            padding: 8px 0;
+            color: #666;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .features li:last-child {
+            border-bottom: none;
+        }
+        
+        .features a {
+            color: #667eea;
             text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .features a:hover {
+            text-decoration: underline;
+        }
+        
+        .footer {
+            margin-top: 30px;
+            color: #999;
+            font-size: 0.9em;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>🐍 Hello, Flask!</h1>
-        <p>Welcome to your first Flask application</p>
-        <p>Try visiting: <a href="/World">/World</a></p>
+        <div class="emoji">🌟</div>
+        <h1>Hello, World!</h1>
+        <p>欢迎来到 <span class="app-name">{{ app_name }}</span></p>
+        <p>这是一个使用 Flask 框架构建的简单 Web 应用示例</p>
+        
+        <div class="features">
+            <h2>📚 可用页面</h2>
+            <ul>
+                <li>🏠 <a href="/">首页</a> - 当前页面</li>
+                <li>👋 <a href="/hello">Hello World</a> - 简单的问候页面</li>
+                <li>👤 <a href="/hello/Flask">个性化问候</a> - 替换为你想要的名字</li>
+                <li>📡 <a href="/api/info">API 信息</a> - 查看应用接口信息</li>
+            </ul>
+        </div>
+        
+        <div class="footer">
+            <p>Made with ❤️ using Flask</p>
+        </div>
     </div>
 </body>
 </html>
