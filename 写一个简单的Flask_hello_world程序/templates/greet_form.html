@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>问候表单</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+        }
+        .form-container {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        input[type="text"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            margin: 10px 0;
+            width: 200px;
+        }
+        button {
+            padding: 10px 30px;
+            font-size: 16px;
+            background: white;
+            color: #f5576c;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #f0f0f0;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>🧡 问候表单</h1>
+        <form method="post">
+            <input type="text" name="name" placeholder="请输入你的名字" required>
+            <br>
+            <button type="submit">问候</button>
+        </form>
+        {% if greeting %}
+        <div class="result">{{ greeting }}</div>
+        {% endif %}
+    </div>
+</body>
+</html>
